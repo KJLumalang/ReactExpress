@@ -32,16 +32,28 @@ function UsersPage() {
     navigate('/login'); // Redirect to login page
   };
 
+  const handleAddUser = () => {
+    navigate('/add-user'); // Redirect to login page
+  };
+
   return (
     <div className="h-screen p-6 bg-gray-100">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Users List</h1>
-        <button
-          onClick={handleLogout}
-          className="bg-red-500 text-white px-4 py-2 rounded"
-        >
-          Logout
-        </button>
+        <div className="flex space-x-4">
+          <button 
+            onClick={handleAddUser}
+            className="bg-blue-500 text-white px-4 py-2 rounded"
+          >
+            Add User
+          </button>
+          <button
+            onClick={handleLogout}
+            className="bg-red-500 text-white px-4 py-2 rounded"
+          >
+            Logout
+          </button>
+        </div>
       </div>
       {message && <p className="text-red-500">{message}</p>}
       <ul className="bg-white shadow-md rounded p-4">
