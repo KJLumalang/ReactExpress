@@ -4,7 +4,6 @@ import LoginForm from '../components/LoginForm';
 
 function LoginPage() {
     return (
-        
         <div>
             <Header />
             <div className="h-screen justify-center items-center bg-gray-100">

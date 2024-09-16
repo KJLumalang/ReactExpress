@@ -6,7 +6,7 @@ function LoginPage() {
     return (
         <div>
             <Header />
-            <div className="h-screen flex justify-center items-center bg-gray-100">
+            <div className="h-screen justify-center items-center bg-gray-100">
                 <RegisterForm />
             </div>
         </div>

@@ -103,6 +103,7 @@ app.post('/users', verifyToken, (req, res) => {
     
     db.query(query, [username, hashedPassword], (err, result) => {
     if (err) {
+        console.error('Error adding user to database:', err);
         return res.status(500).json({ message: 'Error adding user' });
     }
     res.status(201).json({ message: 'User added successfully' });
